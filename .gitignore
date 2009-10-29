@@ -5,3 +5,4 @@ doc/app
 doc/api
 log/*.log
 tmp/**/*
+public/system/documents/*

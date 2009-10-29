@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
 
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end
@@ -18,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = params[:id] ? User.find(params[:id]) : current_user
   end
 
   def edit

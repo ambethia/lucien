@@ -1,27 +1,10 @@
 <h1>New book</h1>
 
-<% form_for(@book) do |f| %>
+<% form_for(@book, :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </p>
-  <p>
-    <%= f.label :copyright %><br />
-    <%= f.text_field :copyright %>
-  </p>
-  <p>
-    <%= f.label :edition %><br />
-    <%= f.text_field :edition %>
-  </p>
-  <p>
-    <%= f.label :publisher %><br />
-    <%= f.text_field :publisher %>
+    <%= f.label :document %><br />
+    <%= f.file_field :document %>
   </p>
   <p>
     <%= f.submit 'Create' %>

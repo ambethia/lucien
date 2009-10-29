@@ -23,6 +23,11 @@
   <%=h @book.publisher %>
 </p>
 
+<p>
+  <b>Document:</b>
+  <%= link_to @book.document_file_name, @book.document.url %>
+</p>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

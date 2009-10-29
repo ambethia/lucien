@@ -31,4 +31,5 @@
   %strong Current login IP:
   =h @user.current_login_ip
 
-%p= link_to 'Edit', edit_account_path
+- if @user == current_user
+  %p= link_to 'Edit', edit_account_path

@@ -7,4 +7,5 @@ Rails::Initializer.run do |config|
   config.gem 'haml'
   config.gem 'authlogic'
   config.gem 'authlogic-oid', :lib => 'authlogic_openid'
+  config.gem 'paperclip'
 end
