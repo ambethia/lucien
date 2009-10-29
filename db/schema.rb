@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(:version => 20091029135553) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",                             :null => false
-    t.string   "email",                            :null => false
+    t.string   "name"
+    t.string   "email"
     t.string   "openid_identifier"
-    t.string   "persistence_token",                :null => false
+    t.string   "persistence_token"
     t.datetime "last_request_at"
     t.datetime "last_login_at"
     t.datetime "current_login_at"
