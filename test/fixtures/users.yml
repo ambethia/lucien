@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  openid_identifier: MyString
+  persistence_token: MyString
+  last_request_at: 2009-10-29 09:55:53
+  last_login_at: 2009-10-29 09:55:53
+  current_login_at: 2009-10-29 09:55:53
+  login_count: 1
+  last_login_ip: MyString
+  current_login_ip: MyString
+
+two:
+  name: MyString
+  email: MyString
+  openid_identifier: MyString
+  persistence_token: MyString
+  last_request_at: 2009-10-29 09:55:53
+  last_login_at: 2009-10-29 09:55:53
+  current_login_at: 2009-10-29 09:55:53
+  login_count: 1
+  last_login_ip: MyString
+  current_login_ip: MyString

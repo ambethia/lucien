@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_filter :require_user
 
   # GET /books
   def index

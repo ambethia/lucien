@@ -1,0 +1,6 @@
+%h1 Register
+
+- form_for @user, :url => account_path do |form|
+  = form.error_messages
+  = render :partial => "form", :object => form
+  = form.submit "Register"
