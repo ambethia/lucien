@@ -1,0 +1,242 @@
+/* = CSS Reset
+ * ------------------------------------------------------ */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  line-height: 1; }
+
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  quotes: none; }
+
+pre, a, abbr, acronym, address, big, cite, code {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: line-through; }
+
+dfn, em, font, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+kbd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  quotes: none; }
+
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none; }
+
+li, fieldset, form, label, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+*:focus {
+  outline: 0; }
+
+body {
+  font-family: Helvetica, sans-serif; }
+
+/* = Humane Messages
+ * ------------------------------------------------------ */
+html, body {
+  height: 100%; }
+
+.humanMsg {
+  font: normal 20px/50px Helvetica, Arial, Sans-Serif;
+  letter-spacing: -1px;
+  position: fixed;
+  top: 130px;
+  left: 25%;
+  width: 50%;
+  color: white;
+  background-color: black;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  z-index: 100000; }
+  .humanMsg .round {
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    font-size: 1px;
+    height: 2px; }
+  .humanMsg p {
+    padding: .3em;
+    display: inline; }
+  .humanMsg a {
+    display: none; }
+
+#humanMsgLog {
+  font: normal 10px Helvetica, Arial, Sans-Serif;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  display: none;
+  z-index: 10000; }
+  #humanMsgLog p {
+    position: relative;
+    left: 50%;
+    width: 200px;
+    margin: 0;
+    margin-left: -100px;
+    padding: 0 10px;
+    line-height: 20px;
+    background: #333;
+    text-align: center;
+    white-space: pre;
+    cursor: pointer; }
+    #humanMsgLog p:hover {
+      background: #222; }
+  #humanMsgLog ul {
+    background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAARCAIAAACaSvE/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNqEjVEKACAIQ516Ee//5wVNCjIjaB/iY5vC3YkoIgDkVDOjQ5pqLCI3r2bLFzNzyydvM4uKqfJPKN4vyl9LO/7o3/6PhwADAIWkFPjc5eRrAAAAAElFTkSuQmCC) repeat-x;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-height: 180px;
+    overflow: auto;
+    display: none; }
+    #humanMsgLog ul li {
+      color: #555;
+      font-size: 12px;
+      list-style-type: none;
+      border-bottom: 1px solid #ddd;
+      line-height: 40px;
+      display: none;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+      white-space: pre; }
+      #humanMsgLog ul li:hover {
+        background: #f2f2f2; }
+      #humanMsgLog ul li:first-child {
+        margin-top: 1px; }
+      #humanMsgLog ul li .error {
+        color: orangered; }
+      #humanMsgLog ul li .indent {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        margin-right: 200px;
+        height: inherit; }
+
+.humanMsg {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .humanMsg .round {
+    border: none; }

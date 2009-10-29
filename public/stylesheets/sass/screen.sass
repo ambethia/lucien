@@ -1,0 +1,21 @@
+@import reset.sass
+
+=rounded-corners(!radius = 5px)
+  -moz-border-radius    = !radius
+  -webkit-border-radius = !radius
+  border-radius         = !radius
+
+body
+  font-family: Helvetica, sans-serif
+
+
+/* = Humane Messages
+  ------------------------------------------------------ */
+
+@import humanmsg.sass
+
+.humanMsg
+  +rounded-corners
+
+  .round
+    border: none
