@@ -51,4 +51,13 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to(books_url)
   end
+
+  # GET /books/1/document
+  def document
+    @book = Book.find(params[:id])
+    send_file @book.document.path,
+              :type        => @book.document_content_type,
+              :x_sendfile  => (true if Rails.env == 'production'),
+              :disposition => 'inline'
+  end
 end
