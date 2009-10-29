@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091029163028) do
+ActiveRecord::Schema.define(:version => 20091029171836) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20091029163028) do
     t.string   "document_content_type"
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
+    t.integer  "uploader_id"
   end
 
   create_table "open_id_authentication_associations", :force => true do |t|

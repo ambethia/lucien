@@ -1,0 +1,26 @@
+%h1 Editing book
+
+- form_for(@book, :html => { :multipart => true }) do |form|
+  = form.error_messages
+
+  %p
+    = form.label :title
+    = form.text_field :title
+  %p
+    = form.label :author
+    = form.text_field :author
+  %p
+    = form.label :copyright
+    = form.text_field :copyright
+  %p
+    = form.label :edition
+    = form.text_field :edition
+  %p
+    = form.label :publisher
+    = form.text_field :publisher
+  %p
+    = form.submit 'Update'
+
+%ul
+  %li= link_to 'Show', @book
+  %li= link_to 'Back', books_path

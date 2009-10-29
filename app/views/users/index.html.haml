@@ -1,0 +1,6 @@
+%h1 Users
+
+%table
+  - for user in @users
+    %tr
+      %td= link_to h(user.name), user

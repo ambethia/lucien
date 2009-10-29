@@ -13,17 +13,17 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
-    @book = Book.new
+    @book = current_user.books.new
   end
 
   # GET /books/1/edit
   def edit
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
   end
 
   # POST /books
   def create
-    @book = Book.new(params[:book])
+    @book = current_user.books.new(params[:book])
 
     if @book.save
       flash[:notice] = 'Book was successfully created.'
@@ -35,7 +35,7 @@ class BooksController < ApplicationController
 
   # PUT /books/1
   def update
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
 
     if @book.update_attributes(params[:book])
       flash[:notice] = 'Book was successfully updated.'
@@ -47,7 +47,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
     @book.destroy
     redirect_to(books_url)
   end

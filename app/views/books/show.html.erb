@@ -28,6 +28,10 @@
   <%= link_to @book.document_file_name, @book.document.url %>
 </p>
 
+<p>
+  <b>Uploader:</b>
+  <%= link_to h(@book.uploader.try(:name)), @book.uploader %>
+</p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

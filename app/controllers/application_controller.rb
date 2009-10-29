@@ -2,10 +2,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   helper :all
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :logged_in?
   filter_parameter_logging :password, :password_confirmation
 
   private
+
+    def logged_in?
+      !!current_user_session
+    end
 
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
