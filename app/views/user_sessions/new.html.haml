@@ -1,13 +1,13 @@
-%h1 Login
-
-- form_for @user_session, :url => user_session_path do |form|
-  = form.error_messages
-  %p
-    = form.label :openid_identifier, "OpenID"
-    = form.text_field :openid_identifier
-  %p
-    = form.check_box :remember_me
-    = form.label :remember_me
-  %p= form.submit "Login"
-
-%p= link_to "Register", new_user_path
+.span-6.push-9
+  - form_for @user_session, :url => user_session_path do |form|
+    %fieldset
+      %legend Log In
+      = form.error_messages
+      %p
+        = form.label :openid_identifier, "OpenID"
+        %br
+        = form.text_field :openid_identifier
+      %p
+        = form.check_box :remember_me
+        = form.label :remember_me
+      %p= form.submit("Login") + " or " + link_to("Register", new_user_path) + "."
