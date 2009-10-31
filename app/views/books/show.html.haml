@@ -1,0 +1,23 @@
+%h2 Book Detail
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Author
+      %th Copyright
+      %th Edition
+      %th Publisher
+      %th Download
+      %th Uploader
+  %tbody
+    %tr
+      %td=h @book.title
+      %td=h @book.author
+      %td=h @book.copyright
+      %td=h @book.edition
+      %td=h @book.publisher
+      %td
+        =link_to @book.document_type, @book.document.try(:url)
+        %small.quiet= "(#{number_to_human_size(@book.document_file_size)})"
+      %td=link_to h(@book.uploader.try(:name)), @book.uploader

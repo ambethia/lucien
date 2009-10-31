@@ -13,18 +13,19 @@
     = stylesheet_link_tag 'screen'
   %body.bp
     .container
-      %header.span-24.last
-        %h1 Lucien
-        %hr
       .span-24.last
-        %ul
-          %li= link_to "Books", books_path
-          %li= link_to "Users", users_path
+        - if logged_in?
+          %ul.navigation{ :class => controller.controller_name }
+            %li.books= link_to "Books", books_path
+            %li.users= link_to "Users", users_path
       .span-24.last
         = render_flash
         = yield
       %footer.span-24.last
-        - if logged_in?
-          %ul
-            %li= link_to h(current_user.name), account_path
-            %li= link_to "Log out", user_session_path, :method => :delete
+        %p
+          -if logged_in?
+            Signed in as
+            = link_to h(current_user.name), account_path
+            = '(' + link_to("Log out", user_session_path, :method => :delete) + ')'
+        
+

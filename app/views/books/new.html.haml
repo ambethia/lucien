@@ -1,0 +1,9 @@
+%h2 New Book
+
+- form_for(@book, :html => { :multipart => true }) do |form|
+  = form.error_messages
+  %p
+    = form.label :document
+    %br
+    = form.file_field :document
+  %p= form.submit('Create') + ' or ' + link_to('Cancel', books_path)
