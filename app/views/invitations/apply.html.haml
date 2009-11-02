@@ -1,0 +1,12 @@
+= error_messages_for :invitation
+- form_for @invitation do |form|
+  %p
+    = form.label :applicant_name
+    %br
+    = form.text_field :applicant_name, :class => 'text'
+  %p
+    = form.label :applicant_email
+    %br
+    = form.text_field :applicant_email, :class => 'text'
+  %p
+    = form.submit 'Apply'

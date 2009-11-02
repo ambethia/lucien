@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :books, :member     => { :document => :get },
                         :collection => { :lookup   => :get }
-  map.resources :users
-  map.resource :account, :controller => "users"
-  map.resource :user_session, :as => "session"
 
-  map.root :controller => "books"
+  map.root :controller => 'application'
+  map.namespace :admin do |admin|
+    admin.root :controller => 'users', :action => 'index'
+  end
 end

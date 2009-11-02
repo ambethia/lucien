@@ -1,0 +1,12 @@
+= error_messages_for :invitation
+- form_for @invitation do |form|
+  %p
+    = form.label :recipient_name
+    %br
+    = form.text_field :recipient_name, :class => 'text'
+  %p
+    = form.label :recipient_email
+    %br
+    = form.text_field :recipient_email, :class => 'text'
+  %p
+    = form.submit 'Invite'

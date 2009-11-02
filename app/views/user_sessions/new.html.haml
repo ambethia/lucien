@@ -5,8 +5,8 @@
   %p
     = form.label :openid_identifier, "OpenID"
     %br
-    = form.text_field :openid_identifier
+    = form.text_field :openid_identifier, :class => 'text'
   %p
     = form.check_box :remember_me
     = form.label :remember_me
-  %p= form.submit("Login") + " or " + link_to("Register", new_user_path) + "."
+  %p= form.submit 'Log In'

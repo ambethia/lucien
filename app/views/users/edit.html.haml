@@ -3,6 +3,6 @@
 - form_for @user, :url => account_path do |form|
   = form.error_messages
   = render :partial => "form", :object => form
-  = form.submit "Register"
+  = form.submit "Update"
 
 %p= link_to "My Profile", account_path
