@@ -60,4 +60,9 @@ class BooksController < ApplicationController
               :x_sendfile  => (true if Rails.env == 'production'),
               :disposition => 'inline'
   end
+
+  # GET /books/lookup
+  def lookup
+    @books = Book::Search[params[:query]]
+  end
 end

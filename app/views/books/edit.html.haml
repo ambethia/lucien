@@ -1,26 +1,52 @@
 %h1 Editing book
 
-- form_for(@book, :html => { :multipart => true }) do |form|
-  = form.error_messages
+.span-8.colborder
 
-  %p
-    = form.label :title
-    = form.text_field :title
-  %p
-    = form.label :author
-    = form.text_field :author
-  %p
-    = form.label :copyright
-    = form.text_field :copyright
-  %p
-    = form.label :edition
-    = form.text_field :edition
-  %p
-    = form.label :publisher
-    = form.text_field :publisher
-  %p
-    = form.submit 'Update'
+  - form_for(@book, :html => { :multipart => true }) do |form|
+    = form.error_messages
 
-%ul
-  %li= link_to 'Show', @book
-  %li= link_to 'Back', books_path
+    %p
+      = form.label :title
+      %br
+      = form.text_field :title, :class => 'text'
+    %p
+      = form.label :author
+      %br
+      = form.text_field :author, :class => 'text'
+    %p
+      = form.label :copyright, 'Copyright Year'
+      %br
+      = form.text_field :copyright, :class => 'text short'
+    %p
+      = form.label :edition
+      %br
+      = form.text_field :edition, :class => 'text short'
+    %p
+      = form.label :publisher
+      %br
+      = form.text_field :publisher, :class => 'text'
+    %p
+      = form.label :isbn, "ISBN (EAN)"
+      %br
+      = form.text_field :isbn, :class => 'text'
+    %p
+      = form.label :asin, "ASIN (Amazon ID)"
+      %br
+      = form.text_field :asin, :class => 'text'
+    %p
+      = form.label :cover_uri, "Cover Image"
+      %br
+      = form.text_field :cover_uri, :class => 'text'
+    %p
+      = form.label :comment
+      %br
+      = form.text_area :comment, :class => 'text'
+    %p
+      = form.submit('Update') + ' or ' + link_to('Cancel', @book)
+
+#book-lookup.span-15.last
+
+  %form#book-lookup-form
+    %input#book-lookup-input(type="search" placeholder="Keyword" results="10"){:value => @book.lookup_default}
+
+  %ul#book-lookup-results

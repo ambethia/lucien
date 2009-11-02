@@ -1,2 +1,31 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(document).ready(function(){
+  $('#book-lookup-form').submit(function(event) {
+    event.preventDefault();
+    doBookLookup();
+  });
+  
+  if ($('#book-lookup-form').length) {
+    doBookLookup();
+  };
+  
+  $('#book-lookup-results').selectable({
+    filter: 'li.result',
+    selected: function(event, ui) {
+      var copy = function(index, field) {
+        value = $(ui.selected).find('.'+field).html();
+        $('#book_'+field).val(value);
+      };
+      $.each(['title', 'author', 'copyright', 'edition', 'publisher',
+              'asin', 'isbn', 'cover_uri'], copy);
+    }
+  })
+});
+
+function doBookLookup() {
+  $.ajax({
+    type: "GET",
+    url: "/books/lookup",
+    data: ({query: $('#book-lookup-input').val()}),
+    dataType: "script"
+  });
+}

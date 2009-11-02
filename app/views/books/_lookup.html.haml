@@ -1,0 +1,13 @@
+%li.result
+  = image_tag(lookup[:cover_uri]) if lookup[:cover_uri]
+  %p
+    %span.title= lookup[:title]
+    %span.author= lookup[:author]
+    %br
+    %span.publisher= lookup[:publisher]
+    %span.edition= lookup[:edition]
+    %span.copyright= lookup[:copyright]
+    %br
+    %span.isbn= lookup[:isbn]
+    %span.asin= lookup[:asin]
+    %span.cover_uri= lookup[:cover_uri]

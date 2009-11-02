@@ -7,21 +7,17 @@
 
 +blueprint
 
-+blueprint-typography("body.bp")
-+blueprint-scaffolding("body.bp")
++blueprint-typography
++blueprint-scaffolding
 
-body.bp
+body
   +blueprint-utilities
   +blueprint-debug
   +blueprint-interaction
 
-form.bp
+form
   +blueprint-form
-
-=rounded-corners(!radius = 5px)
-  -moz-border-radius    = !radius
-  -webkit-border-radius = !radius
-  border-radius         = !radius
+  +blueprint-form-sizes(300px, 300px, 36px)
 
 /* = Navigation
   ------------------------------------------------------ */
@@ -57,3 +53,66 @@ ul.navigation
 
   .round
     border: none
+
+
+/* = Book Lookup
+  ------------------------------------------------------ */
+
+#book-lookup
+
+  form
+    text-align: right
+    margin-bottom: 1em
+
+    input[type=search]
+      width: 400px
+      font-size: 2em
+      padding: 5px
+
+  &-results
+    margin-left: 0
+    margin-right: 0
+  
+    li
+      +no-bullet
+      border: 1px solid #ccc
+      background-color: #eee
+      margin-bottom: 1em
+
+      &.result:hover
+        background-color= !blueprint_table_stripe_color
+        border-color= !blueprint_table_header_color
+        cursor: pointer
+
+      &.result.ui-selected
+        background-color= !blueprint_table_stripe_color
+        border-color= !blueprint_table_header_color
+
+    img
+      float: left
+      padding: 5px
+
+    p
+      margin-top: 1em
+
+      .title
+        font-weight: bold
+        font-size: 1.2em
+
+      .author:before
+        content: 'by '
+
+      .publisher:after
+        content: ";"
+
+      .edition:before
+        content: "Edition "
+
+      .copyright:before
+        content: "("
+
+      .copyright:after
+        content: ")"
+
+      .asin, .cover_uri
+        display: none

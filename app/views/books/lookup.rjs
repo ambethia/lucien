@@ -1,0 +1,6 @@
+unless @books.empty?
+  page.replace_html 'book-lookup-results', :partial => 'lookup', :collection => @books
+else
+  page.replace_html 'book-lookup-results', "<li class=\"no-result\">No matches for query &ldquo;#{params[:query]}&rdquo;.</li>"
+end
+

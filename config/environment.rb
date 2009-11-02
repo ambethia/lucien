@@ -10,4 +10,10 @@ Rails::Initializer.run do |config|
   config.gem 'authlogic'
   config.gem 'authlogic-oid', :lib => 'authlogic_openid'
   config.gem 'paperclip'
+  config.gem 'amazon-ecs', :lib => 'amazon/ecs'
+  config.gem 'jrails'
 end
+
+Amazon::Ecs.options.merge!(
+  YAML.load_file("#{RAILS_ROOT}/config/amazon.yml")[RAILS_ENV]
+)
