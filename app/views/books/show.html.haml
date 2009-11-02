@@ -22,7 +22,7 @@
       %td=h @book.publisher
     %tr
       %th Uploader
-      %td=link_to h(@book.uploader.try(:name)), @book.uploader
+      %td= @book.uploader.try(:name)
     %tr
       %th Download
       %td
