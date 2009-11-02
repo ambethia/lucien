@@ -18,7 +18,11 @@ $(document).ready(function(){
       $.each(['title', 'author', 'copyright', 'edition', 'publisher',
               'asin', 'isbn', 'cover_uri'], copy);
     }
-  })
+  });
+  
+  $('form').submit(function(){
+    $('input[type=submit]', this).attr('disabled', 'disabled');
+  });
 });
 
 function doBookLookup() {
