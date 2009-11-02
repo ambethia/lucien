@@ -16,6 +16,7 @@ namespace :deploy do
   desc "Symlink shared directories into current path"
   task :shared do
     run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/amazon.yml #{release_path}/config/amazon.yml"
     run "ln -nfs #{shared_path}/assets #{release_path}/db/assets"
   end
 

@@ -27,7 +27,7 @@ class BooksController < ApplicationController
 
     if @book.save
       flash[:notice] = 'Book was successfully created.'
-      redirect_to(@book)
+      redirect_to([:edit, @book])
     else
       render :action => "new"
     end
