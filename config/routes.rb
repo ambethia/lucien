@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  SprocketsApplication.routes(map)
+
   map.resources :books, :member     => { :document => :get },
                         :collection => { :lookup   => :get }
   map.resources :users
