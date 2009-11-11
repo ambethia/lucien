@@ -20,8 +20,7 @@
         #navigation
 
           %ul
-            = nav_link :books,      books_path
-            = nav_link :users,      users_path
+            = nav_link :books, books_path
 
         #content
 
@@ -36,8 +35,4 @@
 
           = yield
 
-          -if logged_in?
-            Signed in as
-            = link_to h(current_user.name), account_path
-            = '(' + link_to("Log out", user_session_path, :method => :delete) + ')'
-
+          = render :partial => 'shared/user_status'

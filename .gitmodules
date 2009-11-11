@@ -7,3 +7,6 @@
 [submodule "vendor/plugins/sprockets-rails"]
 	path = vendor/plugins/sprockets-rails
 	url = git://github.com/sstephenson/sprockets-rails.git
+[submodule "vendor/plugins/authentication_engine"]
+	path = vendor/plugins/authentication_engine
+	url = git://github.com/angantyr/authentication_engine.git

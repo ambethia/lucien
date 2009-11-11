@@ -1,0 +1,23 @@
+#user_status
+  - if current_user
+    %p
+      - if current_user.admin?
+        = link_to 'Admin', admin_root_path
+        |
+      = link_to 'Profile', account_path
+      |
+      = link_to 'Logout', logout_path, :method => :delete, :confirm => t('users.confirms.logout')
+
+      - if REGISTRATION[:private] and current_user.invitation_limit > 0
+        |
+        = link_to 'Send Invite', new_invitation_path
+        = "(#{current_user.invitation_limit} left)"
+  - else
+    %p
+      - if REGISTRATION[:requested]
+        = link_to 'Request Invitation', apply_invitations_path
+        |
+      - if REGISTRATION[:public]
+        = link_to 'Register', signup_path
+        |
+      = link_to 'Log In', login_path

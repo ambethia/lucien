@@ -17,6 +17,7 @@ namespace :deploy do
   task :shared do
     run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/amazon.yml #{release_path}/config/amazon.yml"
+    run "ln -nfs #{shared_path}/authentication_engine.yml #{release_path}/config/authentication_engine.yml"
     run "ln -nfs #{shared_path}/assets #{release_path}/db/assets"
   end
 

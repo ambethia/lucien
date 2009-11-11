@@ -1,9 +1,12 @@
 %p
   = form.label :name
-  = form.text_field :name
+  %br
+  = form.text_field :name, :class => 'text'
 %p
   = form.label :email
-  = form.text_field :email
+  %br
+  = form.text_field :email, :class => 'text'
 %p
   = form.label :openid_identifier, "OpenID"
-  = form.text_field :openid_identifier
+  %br
+  = form.text_field :openid_identifier, :class => 'text'
