@@ -6,4 +6,6 @@
     = form.label :document
     %br
     = form.file_field :document
-  %p= form.submit('Create') + ' or ' + link_to('Cancel', books_path)
+  %p
+    %button(type="Submit" class="add") Create
+    = link_to 'Cancel', books_path, :class => 'button'

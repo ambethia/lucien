@@ -1,6 +1,6 @@
 %h1 Editing book
 
-.span-8.colborder
+#book-edit
 
   - form_for(@book, :html => { :multipart => true }) do |form|
     = form.error_messages
@@ -41,10 +41,11 @@
       = form.label :comment
       %br
       = form.text_area :comment, :class => 'text'
-    %p
-      = form.submit('Update') + ' or ' + link_to('Cancel', @book)
+      %p
+        %button(type="Submit" class="alert") Save
+        = link_to 'Cancel', @book, :class => 'button'
 
-#book-lookup.span-15.last
+#book-lookup
 
   %form#book-lookup-form
     %input#book-lookup-input(type="search" placeholder="Keyword" results="10"){:value => @book.lookup_default}

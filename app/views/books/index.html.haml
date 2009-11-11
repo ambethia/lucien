@@ -28,4 +28,5 @@
           -if current_user == book.uploader
             = link_to 'edit', ['edit', book]
 
-%p= link_to 'Upload a Book', new_book_path
+.mod
+  = link_to 'Upload a Book', new_book_path, :class => 'add button'

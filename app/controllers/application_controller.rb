@@ -5,7 +5,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user, :logged_in?
   filter_parameter_logging :password, :password_confirmation
 
+  before_filter :set_current_tab
+
   private
+
+    def set_current_tab
+      @current_tab ||= controller_name.to_sym
+    end
 
     def logged_in?
       !!current_user_session
@@ -24,7 +30,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
+        flash[:warning] = "You must be logged in to access that page"
         redirect_to new_user_session_url
         return false
       end
@@ -33,7 +39,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:notice] = "You must be logged out to access this page"
+        flash[:warning] = "You must be logged out to access that page"
         redirect_to account_url
         return false
       end

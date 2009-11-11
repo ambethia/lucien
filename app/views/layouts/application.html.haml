@@ -9,21 +9,35 @@
       google.load("jqueryui", "1.7.2");
     = sprockets_include_tag
     = stylesheet_link_tag 'screen'
-  %body
-    .container
-      .span-24.last
-        - if logged_in?
-          %ul.navigation{ :class => controller.controller_name }
-            %li.books= link_to "Books", books_path
-            %li.users= link_to "Users", users_path
-      .span-24.last
-        = render_flash
-        = yield
-      %footer.span-24.last
-        %p
+
+    %body{:class => [controller.controller_name,controller.action_name]*'-'}
+      #document
+
+        #header
+
+          %h1 Mogrify
+
+        #navigation
+
+          %ul
+            = nav_link :books,      books_path
+            = nav_link :users,      users_path
+
+        #content
+
+          #subheader
+
+            - if content_defined? :subheader
+              = yield(:subheader)
+            - else
+              %h2= controller.controller_name.titleize + ' &raquo; ' + controller.action_name.titleize
+
+          = render_flashes
+
+          = yield
+
           -if logged_in?
             Signed in as
             = link_to h(current_user.name), account_path
             = '(' + link_to("Log out", user_session_path, :method => :delete) + ')'
-        
 

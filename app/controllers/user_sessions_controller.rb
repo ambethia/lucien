@@ -10,10 +10,10 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     @user_session.save do |result|
       if result
-        flash[:notice] = "Login successful!"
+        flash[:success] = "Login successful!"
         redirect_back_or_default root_url
       else
-        flash[:notice] = "Login unsuccessful!"
+        flash[:warning] = "Login unsuccessful!"
         render :action => :new
       end
     end

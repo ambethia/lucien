@@ -1,10 +1,269 @@
+/* line 15, ../../app/stylesheets/_layout.sass */
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: #ebebeb;
+  color: #44484d; }
+
+/* line 21, ../../app/stylesheets/_layout.sass */
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  color: #30a4b1; }
+  /* line 18, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
+  a:hover {
+    color: white; }
+  /* line 25, ../../app/stylesheets/_layout.sass */
+  a:hover {
+    background-color: #00727f; }
+
+/* line 28, ../../app/stylesheets/_layout.sass */
+p {
+  margin: 10px 0; }
+
+/* line 31, ../../app/stylesheets/_layout.sass */
+a.button, button {
+  color: #30a4b1;
+  background-color: #f5f5f5;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  padding: 6px 10px;
+  border: 1px solid #b9b9b9;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  /* line 47, ../../app/stylesheets/_layout.sass */
+  a.button.add, button.add {
+    padding-left: 30px !important;
+    background-image: url(../images/buttons/add.gif); }
+  /* line 51, ../../app/stylesheets/_layout.sass */
+  a.button.delete, button.delete {
+    padding-left: 30px !important;
+    background-image: url(../images/buttons/delete.gif); }
+  /* line 55, ../../app/stylesheets/_layout.sass */
+  a.button.alert, button.alert {
+    padding-left: 30px !important;
+    background-image: url(../images/buttons/alert.gif); }
+  /* line 59, ../../app/stylesheets/_layout.sass */
+  a.button.info, button.info {
+    padding-left: 30px !important;
+    background-image: url(../images/buttons/info.gif); }
+  /* line 63, ../../app/stylesheets/_layout.sass */
+  a.button:hover, button:hover {
+    color: #00727f;
+    background-color: #e6e6e6; }
+
+/* line 67, ../../app/stylesheets/_layout.sass */
+button {
+  width: auto;
+  overflow: visible;
+  padding: 5px 10px 4px 7px; }
+  /* line 72, ../../app/stylesheets/_layout.sass */
+  button[type] {
+    padding: 5px 10px 5px 7px;
+    line-height: 17px; }
+
+/* line 76, ../../app/stylesheets/_layout.sass */
+*:first-child+html button[type] {
+  padding: 5px 10px 4px 7px; }
+
+/* line 80, ../../app/stylesheets/_layout.sass */
+.flash {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 10px 10px 10px 36px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 90, ../../app/stylesheets/_layout.sass */
+.notice {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('../images/statuses/notice.png'); }
+
+/* line 95, ../../app/stylesheets/_layout.sass */
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image: url('../images/statuses/success.png'); }
+
+/* line 100, ../../app/stylesheets/_layout.sass */
+.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('../images/statuses/warning.png'); }
+
+/* line 105, ../../app/stylesheets/_layout.sass */
+.error {
+  color: #AA000C;
+  background-color: #FFBABA;
+  background-image: url('../images/statuses/error.png'); }
+
+/* line 110, ../../app/stylesheets/_layout.sass */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #b9b9b9;
+  margin: 15px 0; }
+  /* line 116, ../../app/stylesheets/_layout.sass */
+  table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #b9b9b9; }
+  /* line 120, ../../app/stylesheets/_layout.sass */
+  table th {
+    background-color: #d7d7d7;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left; }
+  /* line 128, ../../app/stylesheets/_layout.sass */
+  table tr.even {
+    background-color: #f5f5f5; }
+
+/* line 131, ../../app/stylesheets/_layout.sass */
+#document {
+  width: 960px;
+  position: relative;
+  left: 50%;
+  margin-left: -480px; }
+
+/* line 139, ../../app/stylesheets/_layout.sass */
+#header h1 {
+  color: #44484d;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin: 15px 0; }
+
+/* line 147, ../../app/stylesheets/_layout.sass */
+#navigation {
+  margin-bottom: 15px;
+  background-color: #464646; }
+  /* line 152, ../../app/stylesheets/_layout.sass */
+  #navigation ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px; }
+    /* line 5, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+    #navigation ul {
+      display: block; }
+    /* line 50, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+    #navigation ul li {
+      list-style-type: none;
+      margin-left: 0px;
+      white-space: nowrap;
+      display: inline;
+      float: left;
+      padding-left: 4px;
+      padding-right: 4px; }
+      /* line 40, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+      #navigation ul li.first {
+        padding-left: 0px; }
+      /* line 42, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+      #navigation ul li.last {
+        padding-right: 0px; }
+    /* line 157, ../../app/stylesheets/_layout.sass */
+    #navigation ul li {
+      margin: 0;
+      padding: 0; }
+      /* line 161, ../../app/stylesheets/_layout.sass */
+      #navigation ul li a {
+        color: #ebebeb;
+        display: block;
+        padding: 15px;
+        text-transform: uppercase;
+        text-decoration: none; }
+        /* line 170, ../../app/stylesheets/_layout.sass */
+        #navigation ul li a:focus, #navigation ul li a:hover {
+          background-color: #f7941d; }
+      /* line 175, ../../app/stylesheets/_layout.sass */
+      #navigation ul li.current {
+        background-color: #30a4b1; }
+
+/* line 178, ../../app/stylesheets/_layout.sass */
+#subheader {
+  background-color: white;
+  border-bottom: 1px solid #b9b9b9;
+  padding: 15px;
+  margin: -15px -15px 15px -15px; }
+  /* line 184, ../../app/stylesheets/_layout.sass */
+  #subheader h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0; }
+
+/* line 191, ../../app/stylesheets/_layout.sass */
+#content {
+  overflow: hidden;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #b9b9b9;
+  padding: 15px; }
+  /* line 5, ../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+  #content {
+    display: block; }
+  /* line 197, ../../app/stylesheets/_layout.sass */
+  #content .mod {
+    text-align: right; }
+    /* line 200, ../../app/stylesheets/_layout.sass */
+    #content .mod form {
+      display: inline; }
+  /* line 205, ../../app/stylesheets/_layout.sass */
+  #content form p {
+    margin: 20px 0; }
+  /* line 208, ../../app/stylesheets/_layout.sass */
+  #content form label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px; }
+  /* line 213, ../../app/stylesheets/_layout.sass */
+  #content form input[type=text], #content form textarea, #content form input.text {
+    margin-top: 2px;
+    border: 1px solid #b9b9b9;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 500px; }
+    /* line 221, ../../app/stylesheets/_layout.sass */
+    #content form input[type=text].short, #content form textarea.short, #content form input.text.short {
+      width: 100px; }
+  /* line 224, ../../app/stylesheets/_layout.sass */
+  #content form em {
+    font-style: italic; }
+  /* line 227, ../../app/stylesheets/_layout.sass */
+  #content form li {
+    list-style: none;
+    margin: 5px 0; }
+    /* line 231, ../../app/stylesheets/_layout.sass */
+    #content form li label {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: normal;
+      font-size: 15px;
+      text-transform: none; }
+
 /* = Humane Messages
  * ------------------------------------------------------ */
-/* line 1, ../../app/stylesheets/humanmsg.sass */
+/* line 1, ../../app/stylesheets/_humanmsg.sass */
 html, body {
   height: 100%; }
 
-/* line 5, ../../app/stylesheets/humanmsg.sass */
+/* line 5, ../../app/stylesheets/_humanmsg.sass */
 .humanMsg {
   font: normal 20px/50px Helvetica, Arial, Sans-Serif;
   letter-spacing: -1px;
@@ -18,21 +277,21 @@ html, body {
   display: none;
   opacity: 0;
   z-index: 100000; }
-  /* line 19, ../../app/stylesheets/humanmsg.sass */
+  /* line 19, ../../app/stylesheets/_humanmsg.sass */
   .humanMsg .round {
     border-left: solid 2px white;
     border-right: solid 2px white;
     font-size: 1px;
     height: 2px; }
-  /* line 25, ../../app/stylesheets/humanmsg.sass */
+  /* line 25, ../../app/stylesheets/_humanmsg.sass */
   .humanMsg p {
     padding: .3em;
     display: inline; }
-  /* line 29, ../../app/stylesheets/humanmsg.sass */
+  /* line 29, ../../app/stylesheets/_humanmsg.sass */
   .humanMsg a {
     display: none; }
 
-/* line 33, ../../app/stylesheets/humanmsg.sass */
+/* line 33, ../../app/stylesheets/_humanmsg.sass */
 #humanMsgLog {
   font: normal 10px Helvetica, Arial, Sans-Serif;
   color: white;
@@ -43,7 +302,7 @@ html, body {
   max-height: 200px;
   display: none;
   z-index: 10000; }
-  /* line 44, ../../app/stylesheets/humanmsg.sass */
+  /* line 44, ../../app/stylesheets/_humanmsg.sass */
   #humanMsgLog p {
     position: relative;
     left: 50%;
@@ -56,10 +315,10 @@ html, body {
     text-align: center;
     white-space: pre;
     cursor: pointer; }
-    /* line 57, ../../app/stylesheets/humanmsg.sass */
+    /* line 57, ../../app/stylesheets/_humanmsg.sass */
     #humanMsgLog p:hover {
       background: #222; }
-  /* line 60, ../../app/stylesheets/humanmsg.sass */
+  /* line 60, ../../app/stylesheets/_humanmsg.sass */
   #humanMsgLog ul {
     background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAARCAIAAACaSvE/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNqEjVEKACAIQ516Ee//5wVNCjIjaB/iY5vC3YkoIgDkVDOjQ5pqLCI3r2bLFzNzyydvM4uKqfJPKN4vyl9LO/7o3/6PhwADAIWkFPjc5eRrAAAAAElFTkSuQmCC) repeat-x;
     margin: 0;
@@ -68,7 +327,7 @@ html, body {
     max-height: 180px;
     overflow: auto;
     display: none; }
-    /* line 69, ../../app/stylesheets/humanmsg.sass */
+    /* line 69, ../../app/stylesheets/_humanmsg.sass */
     #humanMsgLog ul li {
       color: #555;
       font-size: 12px;
@@ -80,16 +339,16 @@ html, body {
       position: relative;
       overflow: hidden;
       white-space: pre; }
-      /* line 81, ../../app/stylesheets/humanmsg.sass */
+      /* line 81, ../../app/stylesheets/_humanmsg.sass */
       #humanMsgLog ul li:hover {
         background: #f2f2f2; }
-      /* line 84, ../../app/stylesheets/humanmsg.sass */
+      /* line 84, ../../app/stylesheets/_humanmsg.sass */
       #humanMsgLog ul li:first-child {
         margin-top: 1px; }
-      /* line 87, ../../app/stylesheets/humanmsg.sass */
+      /* line 87, ../../app/stylesheets/_humanmsg.sass */
       #humanMsgLog ul li .error {
         color: orangered; }
-      /* line 90, ../../app/stylesheets/humanmsg.sass */
+      /* line 90, ../../app/stylesheets/_humanmsg.sass */
       #humanMsgLog ul li .indent {
         position: absolute;
         top: 0;
@@ -106,63 +365,70 @@ html, body {
   .humanMsg .round {
     border: none; }
 
-/* = Book Lookup
+/* = Book Edit & Lookup
  * ------------------------------------------------------ */
-/* line 22, ../../app/stylesheets/screen.sass */
-#book-lookup form {
-  text-align: right;
-  margin-bottom: 1em; }
+/* line 20, ../../app/stylesheets/screen.sass */
+#book-edit {
+  float: left; }
+
+/* line 23, ../../app/stylesheets/screen.sass */
+#book-lookup {
+  float: right; }
   /* line 26, ../../app/stylesheets/screen.sass */
-  #book-lookup form input[type=search] {
-    width: 400px;
-    font-size: 2em;
-    padding: 5px; }
-/* line 31, ../../app/stylesheets/screen.sass */
-#book-lookup-results {
-  margin-left: 0;
-  margin-right: 0; }
-  /* line 35, ../../app/stylesheets/screen.sass */
-  #book-lookup-results li {
-    list-style-type: none;
-    margin-left: 0px;
-    border: 1px solid #ccc;
-    background-color: #eee;
+  #book-lookup form {
+    text-align: right;
     margin-bottom: 1em; }
-    /* line 41, ../../app/stylesheets/screen.sass */
-    #book-lookup-results li.result:hover {
-      background-color: #E5ECF9;
-      border-color: #C3D9FF;
-      cursor: pointer; }
-    /* line 46, ../../app/stylesheets/screen.sass */
-    #book-lookup-results li.result.ui-selected {
-      background-color: #E5ECF9;
-      border-color: #C3D9FF; }
-  /* line 50, ../../app/stylesheets/screen.sass */
-  #book-lookup-results img {
-    float: left;
-    padding: 5px; }
-  /* line 54, ../../app/stylesheets/screen.sass */
-  #book-lookup-results p {
-    margin-top: 1em; }
-    /* line 57, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .title {
-      font-weight: bold;
-      font-size: 1.2em; }
-    /* line 61, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .author:before {
-      content: 'by '; }
-    /* line 64, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .publisher:after {
-      content: ";"; }
-    /* line 67, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .edition:before {
-      content: "Edition "; }
-    /* line 70, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .copyright:before {
-      content: "("; }
-    /* line 73, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .copyright:after {
-      content: ")"; }
-    /* line 76, ../../app/stylesheets/screen.sass */
-    #book-lookup-results p .asin, #book-lookup-results p .cover_uri {
-      display: none; }
+    /* line 30, ../../app/stylesheets/screen.sass */
+    #book-lookup form input[type=search] {
+      width: 400px;
+      font-size: 2em;
+      padding: 5px; }
+  /* line 35, ../../app/stylesheets/screen.sass */
+  #book-lookup-results {
+    margin-left: 0;
+    margin-right: 0; }
+    /* line 39, ../../app/stylesheets/screen.sass */
+    #book-lookup-results li {
+      list-style-type: none;
+      margin-left: 0px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      margin-bottom: 1em; }
+      /* line 45, ../../app/stylesheets/screen.sass */
+      #book-lookup-results li.result:hover {
+        background-color: #E5ECF9;
+        border-color: #C3D9FF;
+        cursor: pointer; }
+      /* line 50, ../../app/stylesheets/screen.sass */
+      #book-lookup-results li.result.ui-selected {
+        background-color: #E5ECF9;
+        border-color: #C3D9FF; }
+    /* line 54, ../../app/stylesheets/screen.sass */
+    #book-lookup-results img {
+      float: left;
+      padding: 5px; }
+    /* line 58, ../../app/stylesheets/screen.sass */
+    #book-lookup-results p {
+      margin-top: 1em; }
+      /* line 61, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .title {
+        font-weight: bold;
+        font-size: 1.2em; }
+      /* line 65, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .author:before {
+        content: 'by '; }
+      /* line 68, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .publisher:after {
+        content: ";"; }
+      /* line 71, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .edition:before {
+        content: "Edition "; }
+      /* line 74, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .copyright:before {
+        content: "("; }
+      /* line 77, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .copyright:after {
+        content: ")"; }
+      /* line 80, ../../app/stylesheets/screen.sass */
+      #book-lookup-results p .asin, #book-lookup-results p .cover_uri {
+        display: none; }
