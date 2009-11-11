@@ -5,5 +5,4 @@ doc/api
 log/*.log
 tmp/**/*
 db/assets*
-
 config/*.yml

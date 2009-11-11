@@ -1,47 +1,7 @@
-@import blueprint/reset.sass
-@import partials/base.sass
-@import blueprint
-@import blueprint/modules/scaffolding.sass
 @import compass/utilities/lists.sass
 @import compass/utilities/links.sass
-
-+blueprint
-
-+blueprint-typography
-+blueprint-scaffolding
-
-body
-  +blueprint-utilities
-  +blueprint-debug
-  +blueprint-interaction
-
-form
-  +blueprint-form
-  +blueprint-form-sizes(300px, 300px, 36px)
-
-/* = Navigation
-  ------------------------------------------------------ */
-
-ul.navigation
-  +horizontal-list
-  margin-left: 0px !important
-
-  &.books li.books,
-  &.users li.users
-    a
-      background-color: #333
-
-  li
-    +no-bullet
-
-    a
-      +link-colors(#fff, #fff, #fff, #fff, #fff)
-      text-decoration: none
-      padding: 5px
-      background-color: #666
-
-      &:hover
-        background-color: #333
+@import functions.sass
+@import layout.sass
 
 /* = Humane Messages
   ------------------------------------------------------ */
@@ -53,7 +13,6 @@ ul.navigation
 
   .round
     border: none
-
 
 /* = Book Lookup
   ------------------------------------------------------ */
@@ -80,13 +39,13 @@ ul.navigation
       margin-bottom: 1em
 
       &.result:hover
-        background-color= !blueprint_table_stripe_color
-        border-color= !blueprint_table_header_color
+        background-color: #E5ECF9
+        border-color: #C3D9FF
         cursor: pointer
 
       &.result.ui-selected
-        background-color= !blueprint_table_stripe_color
-        border-color= !blueprint_table_header_color
+        background-color: #E5ECF9
+        border-color: #C3D9FF
 
     img
       float: left
