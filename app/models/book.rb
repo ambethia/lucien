@@ -22,9 +22,7 @@ class Book < ActiveRecord::Base
   module Search
     class << self
       def [] query
-        s = search(query).items
-        pp s[0]
-        return s.inject([]) do |books, book|
+        return search(query).items.inject([]) do |books, book|
           books << {
             :asin      => book.get('asin'),
             :isbn      => book.get('itemattributes/ean'),
