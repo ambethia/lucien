@@ -13,7 +13,7 @@ class Book < ActiveRecord::Base
     if title.blank?
       fn = document.try(:original_filename) || ''
       fn = File.basename(fn, File.extname(fn))
-      fn.gsub(/\W+/, ' ').squish
+      fn.gsub(/[^a-zA-Z0-9]/, ' ').squish
     else
       title
     end
