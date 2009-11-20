@@ -21,6 +21,11 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/assets #{release_path}/db/assets"
   end
 
+  desc 'Generate and install the Sprockets concatenated JavaScript file'
+  task :sprockets, :roles => :app do
+    run "cd #{release_path} && rake RAILS_ENV=production sprockets:install_script"
+  end
+
   desc "Restart Passenger"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
@@ -33,4 +38,4 @@ namespace :deploy do
 end
 
 before "deploy:migrate", "deploy:shared"
-after  "deploy:symlink", "deploy:shared"
+after  "deploy:symlink", "deploy:shared", 'deploy:sprockets'

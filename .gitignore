@@ -6,3 +6,5 @@ log/*.log
 tmp/**/*
 db/assets*
 config/*.yml
+!config/sprockets.yml
+public/sprockets.js
