@@ -41,6 +41,10 @@
       = form.label :comment
       %br
       = form.text_area :comment, :class => 'text'
+    %p
+      = form.label :tag_list, "Tags"
+      %br
+      = form.text_field :tag_list, :class => 'text'
       %p
         %button(type="Submit" class="alert") Save
         = link_to 'Cancel', @book, :class => 'button'

@@ -4,6 +4,8 @@ class Book < ActiveRecord::Base
                     :url  => "/books/:id/document",
                     :path => ":rails_root/db/assets/documents/:id/:basename.:extension"
 
+  acts_as_taggable_on :tags
+
   def document_type
     ext = document.try(:original_filename) || ''
     File.extname(ext).gsub(/^\./, '').upcase

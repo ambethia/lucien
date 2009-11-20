@@ -12,6 +12,7 @@ Rails::Initializer.run do |config|
   config.gem 'paperclip'
   config.gem 'amazon-ecs', :lib => 'amazon/ecs'
   config.gem 'jrails'
+  config.gem 'acts-as-taggable-on'
 end
 
 Amazon::Ecs.options.merge!(
