@@ -1,4 +1,4 @@
-:cron_log, "/var/www/lucien/shared/cron.log"
+set :cron_log, "/var/www/lucien/shared/cron.log"
 
 every 2.hours do
   rake "thinking_sphinx:index", :cron_log => "/dev/null"
