@@ -39,7 +39,7 @@ a.button, button
   background-repeat: no-repeat
   background-position: 8px center
   padding: 6px 10px
-  border= 1px solid !border_color
+  border= 1px "solid" !border_color
   -moz-border-radius: 4px
   -webkit-border-radius: 4px
   border-radius: 4px
@@ -110,12 +110,12 @@ button
 table
   width: 100%
   border-collapse: collapse
-  border= 1px solid !border_color
+  border= 1px "solid" !border_color
   margin: 15px 0
   
   th, td
     padding: 10px
-    border-bottom= 1px solid !border_color
+    border-bottom= 1px "solid" !border_color
 
   th
     background-color= !border_color+30
@@ -167,13 +167,9 @@ table
         text-transform: uppercase
         text-decoration: none
 
-        &:link, &:visited
-          
         &:focus, &:hover
           background-color= !hover_color
 
-        &:active
-    
       &.current
         background-color= !link_color
 
@@ -197,7 +193,7 @@ table
 
 #subheader
   background-color= !content_bg_color
-  border-bottom= 1px solid !border_color
+  border-bottom= 1px "solid" !border_color
   padding: 15px
   margin: -15px -15px 15px -15px
 
@@ -211,7 +207,7 @@ table
 #content
   +clearfix
   background-color= !content_bg_color
-  border= 1px solid !border_color
+  border= 1px "solid" !border_color
   padding: 15px
   
   .mod
@@ -232,7 +228,7 @@ table
 
     input[type=text], textarea, input.text
       margin-top: 2px
-      border= 1px solid !border_color
+      border= 1px "solid" !border_color
       padding: 10px
       +serif-font
       font-size: 15px
