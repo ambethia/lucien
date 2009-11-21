@@ -2,3 +2,9 @@
 
 .mod
   = link_to 'Upload a Book', new_book_path, :class => 'add button'
+
+- content_for :subheader do
+  - if params[:q].blank?
+    %h2 All Books
+  - else
+    %h2= "Books matching &ldquo;#{link_to h(params[:q]), books_path(:q => params[:q])}&rdquo;"

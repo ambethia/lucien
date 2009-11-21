@@ -23,6 +23,10 @@
             = nav_link :books, books_path
             = nav_link :tags,  tags_path
 
+          #search
+            %form{:action => books_path, :method => 'GET'}
+              %input{:value => params[:q]}(type="text" name="q" placeholder="Search")
+
         #content
 
           #subheader

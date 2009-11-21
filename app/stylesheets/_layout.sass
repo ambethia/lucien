@@ -145,11 +145,13 @@ table
     margin: 15px 0
 
 #navigation
+  +clearfix
   margin-bottom: 15px
 
   background-color= !nav_bar_color
 
   ul
+    float: left
     +horizontal-list
     font-size: 15px
     line-height: 15px
@@ -174,6 +176,24 @@ table
     
       &.current
         background-color= !link_color
+
+/* = Search Form
+  ------------------------------------------------------ */
+
+#search
+  float: right
+  margin: 10px
+
+  input
+    background:
+      image: url(../images/icons/search.png)
+      repeat: no-repeat
+      position: 4px center
+    border: 1px solid white
+    margin: 0
+    padding: 3px 3px 3px 24px
+    font-size: 14px
+
 
 #subheader
   background-color= !content_bg_color

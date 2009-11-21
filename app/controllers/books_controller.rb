@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
   # GET /books
   def index
-    @books = Book.search
+    @books = Book.search params[:q]
   end
 
   # GET /books/1
