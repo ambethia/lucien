@@ -1,0 +1,6 @@
+= render 'books/list'
+
+- content_for :subheader do
+  %h2
+    Tagged with
+    = params[:tags].map { |tag| "&ldquo;#{link_to tag, tags_path(tag)}&rdquo;" }.to_sentence

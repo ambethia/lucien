@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include TagsHelper
 
   def render_flashes
     [:notice, :success, :warning, :error].collect do |key|

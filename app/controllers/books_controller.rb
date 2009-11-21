@@ -36,7 +36,7 @@ class BooksController < ApplicationController
   # PUT /books/1
   def update
     @book = current_user.books.find(params[:id])
-
+    current_user.tag(@book, :with => params[:book].try(:delete, :tag_list), :on => :tags)
     if @book.update_attributes(params[:book])
       flash[:success] = 'Book was successfully updated.'
       redirect_to(@book)
