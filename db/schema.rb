@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091120044314) do
+ActiveRecord::Schema.define(:version => 20091121185502) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20091120044314) do
     t.string   "isbn"
     t.string   "cover_uri"
     t.text     "comment"
+    t.boolean  "delta",                 :default => true, :null => false
   end
 
   create_table "invitations", :force => true do |t|

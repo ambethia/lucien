@@ -1,0 +1,5 @@
+development: &common
+  pid_file: <%= "#{Rails.root}/tmp/pids/searchd.#{Rails.env}.pid" %>
+
+production:
+  <<: *common

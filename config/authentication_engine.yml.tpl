@@ -18,7 +18,7 @@ shared: &shared
     name: "Jason L Perry"
     email: "jasper@ambethia.com"
   notifier:
-    host: "lucien.ambethia.com"
+    host: "mogrify.net"
     name: "Lucien"
     email: "noreply@ambethia.com"
   default_content_type: text/html # "text/plain" "text/html" "text/enriched"

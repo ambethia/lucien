@@ -26,6 +26,11 @@ namespace :deploy do
     run "cd #{release_path} && rake RAILS_ENV=production sprockets:install_script"
   end
 
+  desc "Update the crontab file"
+  task :whenever, :roles => :db do
+    run "cd #{release_path} && whenever --update-crontab #{application}"
+  end
+
   desc "Restart Passenger"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
@@ -37,5 +42,7 @@ namespace :deploy do
   end
 end
 
-before "deploy:migrate", "deploy:shared"
-after  "deploy:symlink", "deploy:shared", 'deploy:sprockets'
+before 'deploy:migrate', 'deploy:shared'
+after  'deploy:symlink', 'deploy:shared', 'deploy:sprockets', 'deploy:whenever'
+before 'deploy:update_code', 'thinking_sphinx:stop'
+after  'deploy:update_code', 'thinking_sphinx:configure', 'thinking_sphinx:start'

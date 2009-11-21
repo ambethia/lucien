@@ -13,6 +13,7 @@ Rails::Initializer.run do |config|
   config.gem 'amazon-ecs', :lib => 'amazon/ecs'
   config.gem 'jrails'
   config.gem 'acts-as-taggable-on'
+  config.gem 'thinking-sphinx', :lib => 'thinking_sphinx/0.9.8'
 end
 
 Amazon::Ecs.options.merge!(

@@ -6,6 +6,24 @@ class Book < ActiveRecord::Base
 
   acts_as_taggable_on :tags
 
+  define_index do
+    indexes title,     :sortable => true
+    indexes author,    :sortable => true
+    indexes copyright, :sortable => true
+    indexes edition
+    indexes publisher, :sortable => true
+    indexes asin
+    indexes isbn
+    indexes comment
+
+    indexes uploader(:name), :as => :uploader, :sortable => true
+    indexes tags(:name),     :as => :tags
+
+    has tags(:id), :as => :tag_ids
+    has uploader_id, created_at, updated_at
+    set_property :delta => true
+  end
+
   def document_type
     ext = document.try(:original_filename) || ''
     File.extname(ext).gsub(/^\./, '').upcase
