@@ -1,3 +1,5 @@
+require 'thinking_sphinx/deploy/capistrano'
+
 set :application,           "lucien"
 set :repository,            "git@github.com:ambethia/#{application}.git"
 set :deploy_to,             "/var/www/#{application}"
@@ -31,6 +33,13 @@ namespace :deploy do
     run "cd #{release_path} && whenever --update-crontab #{application}"
   end
 
+  desc "Update sphinx configuration and re-index"
+  task :sphinx, :roles => :db do
+    thinking_sphinx.stop
+    thinking_sphinx.index
+    thinking_sphinx.start
+  end
+
   desc "Restart Passenger"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
@@ -43,6 +52,5 @@ namespace :deploy do
 end
 
 before 'deploy:migrate', 'deploy:shared'
-after  'deploy:symlink', 'deploy:shared', 'deploy:sprockets', 'deploy:whenever'
-before 'deploy:update_code', 'thinking_sphinx:stop'
-after  'deploy:update_code', 'thinking_sphinx:configure', 'thinking_sphinx:start'
+after  'deploy:symlink', 'deploy:shared', 'deploy:sprockets',
+                         'deploy:sphinx', 'deploy:whenever'
