@@ -12,6 +12,12 @@ authorization do
     has_permission_on :users, :to => :manage
     has_permission_on :roles, :to => :manage
   end
+
+  role :guest, :title => "Guest" do
+    description "The default role for anonymous user"
+    # Don't remove this or you can't signup
+    has_permission_on :users, :to => :create
+  end
 end
 
 privileges do
